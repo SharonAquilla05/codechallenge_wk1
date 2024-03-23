@@ -1,25 +1,28 @@
-const grade =prompt ("Enter Your Grade:");
-UserGrade(grade);
+function UserGrade (){
+    let prompt = require('prompt-sync')();
+    //
+    // get input from the user.
+    //
+    let marks = prompt('input your marks');
 
-
-
-function UserGrade (userInput){
-    let finalGrade = "E";
-    
-       if(userInput >=0 && userInput <40){
-        finalGrade = "E";
-       }
-       else if(userInput>=40 && userInput< 49){
-        finalGrade = "D";
-       }
-       else if(userInput>=49 && userInput<=59){
-        finalGrade = "C";}
-        else if(userInput>=60 && userInput <=79){
-            finalGrade = "B";
-        }
-        else if(userInput>=79 && userInput <=100){
-            finalGrade ="A";
-        }
-        return finalGrade;
+    if(marks > 79 && marks <= 100){ 
+        console.log('Your Grade is A');
+    }//
+    else if(marks >= 60 && marks <= 79){
+        console.log("Your grade is B"); 
+    }
+    else if ( marks >= 49 && marks <=59){
+        console.log('Your grade is C')
+    }
+    else if (marks >= 40 && marks <= 48){
+        console.log('Your grade is D' )
+        
+    }
+    else if (marks < 40 && marks >=0){
+        console.log("Your grade is E")
+    }
+    else{
+        console.log('Invalid marks');
+    }
 }
-Document.get.ElementaryById("response").innerText = finalGrade;
+UserGrade()
