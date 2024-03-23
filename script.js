@@ -1,10 +1,11 @@
 function UserGrade (){
+    // promt function
     let prompt = require('prompt-sync')();
     //
     // get input from the user.
     //
     let marks = prompt('input your marks');
-
+// conditional statements used
     if(marks > 79 && marks <= 100){ 
         console.log('Your Grade is A');
     }//
@@ -25,4 +26,5 @@ function UserGrade (){
         console.log('Invalid marks');
     }
 }
+// invoking the function
 UserGrade()
